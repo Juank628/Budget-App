@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   
   root "groups#index"
   devise_for :users
-  get '/splash', to: "aux#show"
+  get '/splash', to: "aux#splash"
 end

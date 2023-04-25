@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def authenticate_user!
-    if user_signed_in?
+    if user_signed_in? || request.original_fullpath.include?('/users/')
       super
     else
       redirect_to '/splash'
