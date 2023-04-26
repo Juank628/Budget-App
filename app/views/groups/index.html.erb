@@ -3,7 +3,7 @@
 <ul class="groups-container">
   <% @groups.each do |group| %>
     <li>
-        <a href="/#" class="group-card">
+        <a href="/groups/<%=group.id%>/entities" class="group-card">
             <img class="group-card-img" src=<%=group.icon%> alt="icon">
             <p><%=group.name%></p>
             <p class="group-card-total">$20.3</p>
