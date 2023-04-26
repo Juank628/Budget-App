@@ -1,4 +1,8 @@
 class GroupsController < ApplicationController
+    def index
+        @groups = current_user.groups
+    end
+    
     def new
         @group = Group.new
     end
@@ -9,7 +13,7 @@ class GroupsController < ApplicationController
 
         respond_to do |format|
             if @group.save
-                format.html { redirect_to groups_path }
+                format.html { redirect_to root_path }
             else
                 format.html { render :new }
             end
