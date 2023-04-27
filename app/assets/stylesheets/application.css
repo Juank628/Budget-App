@@ -14,6 +14,7 @@
  *= require_self
  */
 
+/* General tag styles */
 * {
   box-sizing: border-box;
 }
@@ -27,11 +28,24 @@ a {
   color: gray;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* rails styles modifications */
+
 .field {
   width: 100%;
 }
 
 .actions {
+  width: 100%;
+}
+
+/* general styles */
+
+.w-100 {
   width: 100%;
 }
 
@@ -65,4 +79,59 @@ a {
   color: white;
   border: 0;
   background-color: #3778c2;
+}
+
+.mobile-button-white {
+  width: 100%;
+  height: 40px;
+  color: gray;
+  border: 0;
+  background-color: white;
+}
+
+/* views styles */
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-buttons-group {
+  width: 100%;
+}
+
+.groups-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.group-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.group-card-img {
+  max-width: 100px;
+  border: 1px solid lightgray;
+}
+
+.group-card-total {
+  margin-left: auto;
+}
+
+.transactions-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }

@@ -2,8 +2,17 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :update_allowed_parameters, if: :devise_controller?
+  before_action :authenticate_user!
 
   protected
+
+  def authenticate_user!
+    if user_signed_in? || request.original_fullpath.include?('/users/')
+      super
+    else
+      redirect_to '/splash'
+    end
+  end
 
   def update_allowed_parameters
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password) }

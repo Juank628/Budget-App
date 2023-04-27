@@ -1,0 +1,14 @@
+<h1>Groups index</h1>
+
+<ul class="groups-container">
+  <% @groups.each_with_index do |group, index| %>
+    <li>
+        <a href="/groups/<%=group.id%>/entities" class="group-card">
+            <img class="group-card-img" src=<%=group.icon%> alt="icon">
+            <p><%=group.name%></p>
+            <p class="group-card-total">$<%=@totals[index]%></p>
+        </a>
+    </li>
+  <% end %>
+  <a href="/groups/new" class="w-100"><button class="mobile-button-blue">ADD NEW CATEGORY</button></a>
+</ul>

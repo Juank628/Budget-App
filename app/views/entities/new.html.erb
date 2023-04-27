@@ -1,0 +1,16 @@
+<h1>New transaction</h1>
+
+<%= form_with model: @entity, url: group_entities_path do |form| %>
+    <div class="form">
+        <div class="form-group">
+            <%= form.text_field :name, required: true, class: "mobile-field", placeholder: "Transaction name" %>
+        </div>
+        <div class="form-group">
+            <%= form.text_field :amount, required: true, class: "mobile-field", placeholder: "Amount" %>
+        </div>
+
+        <%= form.collection_select :groups, @groups, :id, :name, { prompt: "" }, { class: "input max_width field accordion-body", multiple: true, required: true } %>
+
+        <%= form.submit "CREATE TRANSACTION", class: "mobile-button-blue" %>
+    </div>
+<% end %>
