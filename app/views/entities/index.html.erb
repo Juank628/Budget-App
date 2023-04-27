@@ -1,3 +1,13 @@
 <h1>Transactions</h1>
 
+<ul class="groups-container">
+    <% @current_group_entities.each do |entity| %>
+        <li class="group-card">
+            <img src="https://img.freepik.com/free-vector/dollar_53876-25498.jpg?w=740&t=st=1682565350~exp=1682565950~hmac=86328b4bf933dcd439512c296099ec3462629c59e9da2f34cdb28d91e9c347bd" class="group-card-img" >
+            <p><%= entity.name %></p>
+            <p class="group-card-total"><%= entity.amount %></p>
+        </li>
+    <% end %>
+</ul>
+
 <a href="/groups/<%=@group_id%>/entities/new" class="w-100"><button class="mobile-button-blue">ADD NEW TRANSACTION</button></a>
