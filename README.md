@@ -26,7 +26,7 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 Spend Tracker <a name="about-project"></a>
+# 📖 Budget App <a name="about-project"></a>
 
 **Budget App** is an application made in Ruby on Rails, to keep track of all personal expenses. It allows creating expense categories and adding expenses in specific categories to keep track of all your expenses. It is very useful if you want to analyze your expenses and find saving opportunities.
 
