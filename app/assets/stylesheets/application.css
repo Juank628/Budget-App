@@ -14,7 +14,7 @@
  *= require_self
  */
 
-/*General tag styles*/
+/* General tag styles */
 * {
   box-sizing: border-box;
 }
@@ -33,7 +33,7 @@ ul {
   padding: 0;
 }
 
-/*rails styles modifications*/
+/* rails styles modifications */
 
 .field {
   width: 100%;
@@ -43,7 +43,7 @@ ul {
   width: 100%;
 }
 
-/*general styles*/
+/* general styles */
 
 .w-100 {
   width: 100%;
@@ -89,7 +89,7 @@ ul {
   background-color: white;
 }
 
-/*views styles*/
+/* views styles */
 
 .splash-container {
   display: flex;
