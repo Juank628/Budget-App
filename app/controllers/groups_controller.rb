@@ -1,6 +1,14 @@
 class GroupsController < ApplicationController
   def index
-    @groups = current_user.groups
+    @groups = Group.where(user_id: current_user.id)
+    @totals = []
+
+    @groups.each_with_index do |group, index|
+      @totals[index] = 0
+      group.entities.each do |entity|
+        @totals[index] += entity.amount
+      end
+    end
   end
 
   def new
