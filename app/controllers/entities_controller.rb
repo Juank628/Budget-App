@@ -30,7 +30,7 @@ class EntitiesController < ApplicationController
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to root_path }
+        format.html { redirect_to group_entities_path(params[:group_id]) }
       else
         p '***********************'
         p @entity.errors.full_messages
