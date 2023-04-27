@@ -68,6 +68,7 @@ group :development do
   # gem "spring"
 
   gem 'rubocop', '>= 1.0', '< 2.0'
+  gem 'bullet'
 end
 
 group :test do
