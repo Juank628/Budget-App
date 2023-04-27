@@ -1,13 +1,17 @@
 class EntitiesController < ApplicationController
   def index
     @group_id = params[:group_id].to_i
-    @entities = Entity.where(author_id: current_user.id)
+    @entities = Entity.where(author_id: current_user.id).order(created_at: :desc)
     @current_group_entities = []
+    @total_amount = 0
 
     @entities.each do |entity|
       @groups_array = entity.groups.to_a
       @groups_array.each do |group|
-        @current_group_entities << entity if group.id == @group_id
+        if group.id == @group_id
+          @current_group_entities << entity
+          @total_amount += entity.amount
+        end
       end
     end
   end
