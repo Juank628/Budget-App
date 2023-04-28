@@ -1,12 +1,16 @@
 <%= form_with model: @group, url: groups_path do |form| %>
-    <div class="form">
+    <div class="new-item-form">
+        
         <div class="form-group">
             <%= form.text_field :name, required: true, class: "mobile-field", placeholder: "Category name" %>
         </div>
+        <hr class="separator-line">
         <div class="form-group">
             <%= form.text_field :icon, required: true, class: "mobile-field", placeholder: "Icon" %>
         </div>
 
-        <%= form.submit "CREATE CATEGORY", class: "mobile-button-blue" %>
+        <div class="footer-container">
+            <%= form.submit "CREATE CATEGORY", class: "mobile-button-green" %>
+        </div>
     </div>
 <% end %>
