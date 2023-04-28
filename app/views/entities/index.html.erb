@@ -1,15 +1,19 @@
-<div class="transactions-total">
-   <span>Total amount:</span> <span>$<%=@total_amount%></span>
-</div>
+<section class="section-container">
 
-<ul class="groups-container">
-    <% @current_group_entities.each do |entity| %>
-        <li class="group-card">
-            <img src="https://img.freepik.com/free-vector/dollar_53876-25498.jpg?w=740&t=st=1682565350~exp=1682565950~hmac=86328b4bf933dcd439512c296099ec3462629c59e9da2f34cdb28d91e9c347bd" class="group-card-img" >
-            <p><%= entity.name %></p>
-            <p class="group-card-total">$<%= entity.amount %></p>
-        </li>
-    <% end %>
-</ul>
+    <div class="transactions-total">
+      <span>Total amount:</span> <span class="total-ammount">$<%=@total_amount%></span>
+    </div>
 
-<a href="/groups/<%=@group_id%>/entities/new" class="w-100"><button class="mobile-button-blue">ADD NEW TRANSACTION</button></a>
+    <ul class="list-container">
+        <% @current_group_entities.each do |entity| %>
+            <li class="group-card">
+                <img src="https://img.freepik.com/free-vector/dollar_53876-25498.jpg?w=740&t=st=1682565350~exp=1682565950~hmac=86328b4bf933dcd439512c296099ec3462629c59e9da2f34cdb28d91e9c347bd" class="group-card-img" >
+                <p><%= entity.name %></p>
+                <p class="group-card-total">$<%= entity.amount %></p>
+            </li>
+        <% end %>
+    </ul>
+    <div class="footer-container">
+        <a href="/groups/<%=@group_id%>/entities/new" class="link-row"><button class="mobile-button-green">ADD NEW TRANSACTION</button></a>
+    </div>
+</section>

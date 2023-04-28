@@ -1,12 +1,16 @@
-<ul class="groups-container">
-  <% @groups.each_with_index do |group, index| %>
-    <li>
-        <a href="/groups/<%=group.id%>/entities" class="group-card">
-            <img class="group-card-img" src=<%=group.icon%> alt="icon">
-            <p><%=group.name%></p>
-            <p class="group-card-total">$<%=@totals[index]%></p>
-        </a>
-    </li>
-  <% end %>
-  <a href="/groups/new" class="w-100"><button class="mobile-button-blue">ADD NEW CATEGORY</button></a>
-</ul>
+<section class="section-container">
+  <ul class="list-container">
+    <% @groups.each_with_index do |group, index| %>
+      <li>
+          <a href="/groups/<%=group.id%>/entities" class="group-card">
+              <img class="group-card-img" src=<%=group.icon%> alt="icon">
+              <p><%=group.name%></p>
+              <p class="group-card-total">$<%=@totals[index]%></p>
+          </a>
+      </li>
+    <% end %>
+  </ul>
+  <div class="footer-container">
+    <a href="/groups/new" class="link-row"><button class="mobile-button-green">ADD NEW CATEGORY</button></a>
+  </div>
+</section>

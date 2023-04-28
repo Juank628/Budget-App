@@ -27,12 +27,15 @@ body {
 
 a {
   text-decoration: none;
-  color: gray;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+p {
+  margin: 0;
 }
 
 /* rails styles modifications */
@@ -84,6 +87,15 @@ ul {
   background-color: #3778c2;
 }
 
+.mobile-button-green {
+  width: 90%;
+  height: 40px;
+  color: white;
+  border: 0;
+  background-color: #5fb523;
+  border: 1px solid white
+}
+
 .mobile-button-white {
   width: 100%;
   height: 40px;
@@ -91,6 +103,36 @@ ul {
   border: 0;
   background-color: white;
 }
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 40px);
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: auto;
+  background-color: #5fb523;
+}
+
+.link-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 
 /* views styles */
 
@@ -107,17 +149,12 @@ ul {
   width: 100%;
 }
 
-.groups-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
 .group-card {
   display: flex;
   align-items: center;
   gap: 10px;
   background-color: white;
+  color: #434b54;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -129,6 +166,7 @@ ul {
 
 .group-card-total {
   margin-left: auto;
+  font-weight: 600;
 }
 
 .transactions-total {
@@ -139,6 +177,11 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.total-ammount {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -146,6 +189,7 @@ ul {
   color: white;
   padding: 10px;
   font-weight: 500;
+  height: 40px;
 }
 
 .nav-container a {
