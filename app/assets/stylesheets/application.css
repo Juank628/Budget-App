@@ -21,6 +21,8 @@
 
 body {
   background-color: #f5f6f8;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
 }
 
 a {
@@ -60,7 +62,8 @@ ul {
   flex-direction: column;
   align-items: center;
   background-color: white;
-  padding: 0 15px;
+  padding: 15px;
+  margin-top: 50px;
 }
 
 .mobile-field {
@@ -134,4 +137,17 @@ ul {
   padding: 15px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3778c2;
+  color: white;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.nav-container a {
+  color: white;
 }

@@ -6,14 +6,6 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  def authenticate_user!
-    if user_signed_in? || request.original_fullpath.include?('/users/')
-      super
-    else
-      redirect_to '/splash'
-    end
-  end
-
   def update_allowed_parameters
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password) }
     devise_parameter_sanitizer.permit(:account_update) do |u|

@@ -1,7 +1,7 @@
 class EntitiesController < ApplicationController
   def index
     @group_id = params[:group_id].to_i
-    @entities = Entity.where(author_id: current_user.id).order(created_at: :desc)
+    @entities = Entity.includes([:groups]).where(author_id: current_user.id).order(created_at: :desc)
     @current_group_entities = []
     @total_amount = 0
 
@@ -30,7 +30,7 @@ class EntitiesController < ApplicationController
 
     respond_to do |format|
       if @entity.save
-        format.html { redirect_to root_path }
+        format.html { redirect_to group_entities_path(params[:group_id]) }
       else
         p '***********************'
         p @entity.errors.full_messages
