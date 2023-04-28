@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   
   root "aux#splash"
-  devise_for :users
-  resources :groups do
-    resources :entities
+  devise_for :users, only: [:sessions, :registrations]
+  resources :groups, only: [:index, :new, :create] do
+    resources :entities, only: [:index, :new, :create]
   end
 end

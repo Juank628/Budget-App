@@ -40,6 +40,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: 'proxima-nova-bold', 'Quicksand', sans-serif;
+}
+
 a {
   text-decoration: none;
 }
