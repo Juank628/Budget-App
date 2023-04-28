@@ -65,7 +65,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://xxxxxxxxxxxxxxxxxxxx)
+- [Live Demo Link](https://budget-app-3qt3.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
