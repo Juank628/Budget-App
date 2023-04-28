@@ -91,7 +91,7 @@ Optionally, in order to modify this project you should to have installed:
 To clone this repository to your desired folder:
 
 ```console
-git clone https://github.com/paulsaenzsucre/spend-tracker.git
+git clone git@github.com:Juank628/Budget-App.git
 ```
 
 - Access the cloned directory with:
