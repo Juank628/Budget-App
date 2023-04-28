@@ -1,0 +1,17 @@
+<%= form_with model: @entity, url: group_entities_path do |form| %>
+    <div class="new-item-form">
+        <div class="form-group">
+            <%= form.text_field :name, required: true, class: "mobile-field", placeholder: "Transaction name" %>
+        </div>
+        <hr class="separator-line">
+        <div class="form-group">
+            <%= form.number_field :amount, required: true, class: "mobile-field", placeholder: "Amount", step: :any %>
+        </div>
+
+        <%= form.collection_select :groups, @groups, :id, :name, {}, { class: "input max_width field accordion-body", multiple: true, required: true } %>
+
+        <div class="footer-container">
+            <%= form.submit "CREATE TRANSACTION", class: "mobile-button-green" %>
+        </div>
+    </div>
+<% end %>

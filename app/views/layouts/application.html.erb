@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <% if !current_page?(root_path) %>
+      <header>
+        <nav class="nav-container">
+          <div>
+            <% if request.url.include?('entities/new') %>
+              <%= link_to '<-', "/groups/#{params[:group_id]}/entities" %>
+            <% elsif request.url.include?('entities') %>
+              <%= link_to '<-', '/groups' %>
+            <% elsif request.url.include?('groups/new') %>
+              <%= link_to '<-', '/groups' %>
+            <% elsif request.url.include?('sign_in') %>
+              <%= link_to '<-', '/' %>
+            <% elsif request.url.include?('sign_up') %>
+              <%= link_to '<-', '/' %>
+            <% end %>
+          </div>
+          <div>
+            <% if request.url.include?('entities/new') %>
+              <span>NEW TRANSACTION</span>
+            <% elsif request.url.include?('entities') %>
+              <span>TRANSACTIONS</span>
+            <% elsif request.url.include?('groups/new') %>
+              <span>NEW CATEGORY</span>
+            <% elsif request.url.include?('groups') %>
+              <span>CATEGORIES</span>
+            <% elsif request.url.include?('sign_in') %>
+              <span>LOGIN</span>
+            <% elsif request.url.include?('sign_up') %>
+              <span>REGISTER</span>
+            <% end %>
+          </div>
+          <div>
+            <span></span>
+          </div>
+        </nav>
+      </header>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
