@@ -14,20 +14,20 @@
  *= require_self
  */
 
-/*fonts*/
+/* fonts */
 @font-face {
   font-family: 'proxima-nova-bold';
   font-style: normal;
   font-weight: 600;
-  src: font-url('FontsFree-Net-Proxima-Nova-Bold.otf') format('opentype');
-} 
+  src: url('FontsFree-Net-Proxima-Nova-Bold.otf') format('opentype');
+}
 
 @font-face {
   font-family: 'proxima-nova';
   font-style: normal;
   font-weight: 600;
-  src: font-url('FontsFree-Net-Proxima-Nova4.ttf') format('truetype');
-} 
+  src: url('FontsFree-Net-Proxima-Nova4.ttf') format('truetype');
+}
 
 /* General tag styles */
 * {
@@ -106,9 +106,8 @@ p {
   width: 90%;
   height: 40px;
   color: white;
-  border: 0;
   background-color: #5fb523;
-  border: 1px solid white
+  border: 1px solid white;
 }
 
 .mobile-button-white {
@@ -154,7 +153,6 @@ p {
   height: calc(100vh - 40px);
 }
 
-
 /* views styles */
 
 .splash-container {
@@ -187,8 +185,7 @@ p {
 
 .group-card-total {
   margin-left: auto;
-  font-family: 'proxima-nova-bold', 'Quicksand';
-  font-weight: 600;
+  font-family: 'proxima-nova-bold', 'Quicksand', sans-serif;
 }
 
 .transactions-total {
@@ -200,7 +197,7 @@ p {
 }
 
 .total-ammount {
-  font-weight: 600;
+  font-family: 'proxima-nova-bold', 'Quicksand', sans-serif;
   font-size: 1.2rem;
 }
 
