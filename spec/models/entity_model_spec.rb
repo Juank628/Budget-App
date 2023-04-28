@@ -27,5 +27,4 @@ RSpec.describe Entity, type: :model do
     subject.groups = []
     expect(subject).to_not be_valid
   end
-
 end
