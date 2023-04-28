@@ -21,7 +21,7 @@
 
 body {
   background-color: #f5f6f8;
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
 }
 
@@ -149,5 +149,5 @@ ul {
 }
 
 .nav-container a {
-  color: white
+  color: white;
 }
